@@ -248,12 +248,13 @@ if($zip->open($archivoZip,ZIPARCHIVE::CREATE)===true) {
 
 //Verificar si el archivo ha sido creado
 if (file_exists($rutaFinal.$archivoZip)){
-    header("Content-type: application/octet-stream");
+    /*header("Content-type: application/octet-stream");
     header("Content-disposition: attachment; filename=miarchivo.zip");
     // leemos el archivo creado
     readfile('../comprimidos/' . $archivoZip);
     // Por último eliminamos el archivo temporal creado
-    unlink($archivoZip);//Destruye el archivo temporal
+    unlink($archivoZip);//Destruye el archivo temporal*/
+    echo "Archivo Generado!";
     //exit;
 }else{
     echo "Error, archivo zip no ha sido creado!!";
